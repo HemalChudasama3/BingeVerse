@@ -1,7 +1,7 @@
 "use client"
 
 import { AppProps } from 'next/app';
-import Layout from './layout';
+import Layout from '../styles/layout';
 
 import { NextPageContext } from 'next';
 import { getSession, signOut } from 'next-auth/react';
@@ -31,9 +31,12 @@ export default function Home() {
 
   return (
     <>
-    <h1>BingeVerse</h1>
+    <div className='bg-black h-screen w-screen'>
+
+    <h1 className='text-white text-lg'>BingeVerse</h1>
     <p className='text-white'>Logged in as : {user?.name}</p>
     <button className='h-10 w-full bg-white' onClick={() => signOut()}>Logout</button>
+    </div>
     </>
   );
 }
