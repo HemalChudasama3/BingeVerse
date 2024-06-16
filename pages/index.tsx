@@ -6,6 +6,7 @@ import Layout from '../styles/layout';
 import { NextPageContext } from 'next';
 import { getSession } from 'next-auth/react';
 import Navbar from '@/components/Navbar';
+import Billboard from '@/components/Billboard';
 
 import { redirect } from 'next/dist/server/api-utils';
 
@@ -32,6 +33,7 @@ export default function Home() {
     <>
     <div className='bg-gray-950 h-screen w-screen text-white'>
       <Navbar />
+      <Billboard />
     </div>
     </>
   );
