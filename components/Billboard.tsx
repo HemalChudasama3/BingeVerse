@@ -28,7 +28,7 @@ const Billboard = () => {
                     h-full
                     w-[50%]
                     lg:text-6xl
-                    font-bold
+                    font-semibold
                     drop-shadow-xl
                 ">
                     {data?.title}
@@ -63,6 +63,7 @@ const Billboard = () => {
                         hover:bg-opacity-20
                         transition
                     ">
+                        <AiOutlineInfoCircle className="mr-1" />
                         More Info
                     </button>
                 </div>

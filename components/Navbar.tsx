@@ -41,13 +41,13 @@ const Navbar = () => {
             <div className={`
                 px-4
                 md:px-16
-                py-6
+                py-5
                 flex
                 flex-row
                 item-center
                 transition
                 duration-500
-                ${showBackground ? 'bg-zinc-900 bg-opacity-90' : ''}
+                ${showBackground ? 'bg-black bg-opacity-90' : ''}
             `}>
                 <img className="h-4 lg:h-7" src="/images/logo.png" alt="Logo" />
                 <div className="
@@ -78,7 +78,7 @@ const Navbar = () => {
                     </div>
 
                     <div onClick={toggleAccountMenu} className="flex flex-row items-center gap-2 cursor-pointer relative">
-                        <div className="w-6 h-6 lg:w-10 lg:h-10 rounded-md overflow-hidden">
+                        <div className="w-4 h-4 lg:w-10 lg:h-10 rounded-md overflow-hidden">
                             <img src="/images/Profile.png" alt="Profile" />
                         </div>
                         <BsChevronDown className={`text-white transition ${showAccountMenu ? 'rotate-180' : 'rotate-0'}`} />
