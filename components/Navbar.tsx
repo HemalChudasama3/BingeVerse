@@ -49,10 +49,11 @@ const Navbar = () => {
                 duration-500
                 ${showBackground ? 'bg-black bg-opacity-90' : ''}
             `}>
-                <img className="h-4 lg:h-7" src="/images/logo.png" alt="Logo" />
+                <img className="h-4 mt-1 lg:h-7" src="/images/logo.png" alt="Logo" />
                 <div className="
                     flex-row
                     ml-8
+                    mt-2
                     gap-7
                     hidden
                     lg:flex
