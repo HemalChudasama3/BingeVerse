@@ -37,7 +37,7 @@ export default function Home() {
 
   return (
     <>
-    <div className='bg-zinc-900 h-full w-full text-white'>
+    <div className='bg-zinc-900 h-full w-full'>
       <Navbar />
       <Billboard />
       <div className='pb-40'>
