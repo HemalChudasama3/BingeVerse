@@ -1,9 +1,7 @@
 import { NextApiRequest, NextApiResponse } from "next";
-import { PrismaClient } from "@prisma/client";
+import prismadb from "@/lib/prismadb";
 import { getServerSession } from "next-auth";
 import { authOptions } from "@/pages/api/auth/[...nextauth]";
-
-const prisma = new PrismaClient();
 
 const serverAuth = async (req: NextApiRequest , res:NextApiResponse) => {
     const session = await getServerSession(req,res,authOptions);
@@ -12,7 +10,7 @@ const serverAuth = async (req: NextApiRequest , res:NextApiResponse) => {
         throw new Error("Not signed in");
     }
 
-    const currentUser = await prisma.user.findUnique({
+    const currentUser = await prismadb.user.findUnique({
         where: {
             email: session.user.email,
         },

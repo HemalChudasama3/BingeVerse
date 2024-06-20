@@ -12,6 +12,8 @@ import useMovieList from '@/hooks/useMovieList';
 
 import { redirect } from 'next/dist/server/api-utils';
 import useFavorites from '@/hooks/useFavorites';
+import InfoModal from '@/components/InfoModal';
+import useInfoModal from '@/hooks/useInfoModal';
 
 export async function getServerSideProps(context: NextPageContext) {
   const session = await getSession(context);
@@ -34,10 +36,12 @@ export default function Home() {
 
   const { data: movies = [] } = useMovieList();
   const { data: favorites = [] } = useFavorites();
+  const { isOpen, closeModal } = useInfoModal();
 
   return (
     <>
     <div className='bg-zinc-900 h-full w-full'>
+      <InfoModal visible={isOpen} onClose={closeModal} />
       <Navbar />
       <Billboard />
       <div className='pb-40'>
